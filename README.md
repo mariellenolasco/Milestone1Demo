@@ -2,6 +2,7 @@
 Milestone 1 Demo for the corporate batch
 
 # Instructions
+Use gitpod to work on this milestone. 
 Refer to the solution design document and complete the models by adding the appropriate properties and validation logic needed for each model.
 All unit tests must pass.
 
