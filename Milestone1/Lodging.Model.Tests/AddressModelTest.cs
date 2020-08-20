@@ -16,12 +16,13 @@ namespace Lodging.Models.Tests
               Id = 0,
               City = "city",
               Country = "country",
-              PostalCode = "postalcode",
+              PostalCode = "33613",
               StateProvince = "stateprovince",
               Street = "street"
             }
           }
         };
+
         public static readonly IEnumerable<Object[]> _invalidAddresses = new List<Object[]>
         {
           new object[]
@@ -37,6 +38,7 @@ namespace Lodging.Models.Tests
             }
           }
         };
+
         [Theory]
         [MemberData(nameof(_addresses))]
         public void Test_Create_AddressModel(AddressModel address)
@@ -52,16 +54,16 @@ namespace Lodging.Models.Tests
         public void Test_Validate_AddressModel(AddressModel address)
         {
             var validationContext = new ValidationContext(address);
-
             Assert.Empty(address.Validate(validationContext));
         }
+
         [Theory]
         [MemberData(nameof(_invalidAddresses))]
         public void Test_Validate_InvalidAddressModel(AddressModel address)
         {
             var validationContext = new ValidationContext(address);
-
             Assert.NotEmpty(address.Validate(validationContext));
         }
+
     }
 }
