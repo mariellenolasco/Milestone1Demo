@@ -25,16 +25,30 @@ namespace Lodging.Models.Tests
 
         public static readonly IEnumerable<Object[]> _invalidAddresses = new List<Object[]>
         {
+          //invalid city
           new object[]
           {
             new AddressModel()
             {
               Id = 0,
               City = "",
-              Country = "",
+              Country = "testCountry",
+              PostalCode = "12345",
+              StateProvince = "province",
+              Street = "1234 test"
+            }
+          },
+          //invalid postal code
+          new object[]
+          {
+            new AddressModel()
+            {
+              Id = 0,
+              City = "testCity",
+              Country = "testCountry",
               PostalCode = "",
-              StateProvince = "",
-              Street = ""
+              StateProvince = "test state",
+              Street = "123 test"
             }
           }
         };
