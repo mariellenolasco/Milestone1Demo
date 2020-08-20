@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Lodging.Models.Models
+namespace Lodging.Models
 {
     /// <summary>
     /// Model for the Lodging and all its details

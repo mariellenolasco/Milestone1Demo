@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Lodging.Models.Models
-{
+namespace Lodging.Models{ 
     /// <summary>
     /// Model for describing the location of a lodging
     /// </summary>
