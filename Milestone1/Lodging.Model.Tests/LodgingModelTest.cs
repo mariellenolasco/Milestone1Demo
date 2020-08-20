@@ -23,6 +23,21 @@ namespace Lodging.Models.Tests
             }
           }
         };
+        public static readonly IEnumerable<Object[]> _invalidLodgings = new List<Object[]>
+        {
+          new object[]
+          {
+            new LodgingModel()
+            {
+              Id = 0,
+              Location = new LocationModel(),
+              Name = "name",
+              Bathrooms = 5,
+              Rentals = new List<RentalModel>(),
+              Reviews = new List<ReviewModel>()
+            }
+          }
+        };
 
         [Theory]
         [MemberData(nameof(_lodgings))]
@@ -41,6 +56,15 @@ namespace Lodging.Models.Tests
             var validationContext = new ValidationContext(lodging);
 
             Assert.Empty(lodging.Validate(validationContext));
+        }
+
+        [Theory]
+        [MemberData(nameof(_invalidLodgings))]
+        public void Test_Validate_InvalidLodgingModel(LodgingModel lodging)
+        {
+            var validationContext = new ValidationContext(lodging);
+
+            Assert.NotEmpty(lodging.Validate(validationContext));
         }
     }
 }
