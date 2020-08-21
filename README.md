@@ -1,9 +1,15 @@
-# Milestone1Demo
-Milestone 1 Demo for the corporate batch
+# Milestone 1  
+Milestone 1 base code for the corporate batch. 
 
-## Instructions
-Refer to the solution design document and complete the models by adding the appropriate properties and validation logic needed for each model. <br>
-All unit tests must pass.<br>
+## Overview
+The Lodging API is a rest service intended to cater to camping enthusiasts to find the perfect accommodations for their next adventure! It is currently under development. Preliminary models have been made but validation is still missing. Some class properties may need to be implemented as well.
+
+### Goal
+Your goal as a developer is to provide the missing implementations such that they:
+<ol>
+<li> Comply with the behavior and design described in the solution design document </li>
+<li> Pass all the unit tests </li>
+</ol>
 
 ### Hint
 The AddressModel has a half implemented validate method that shows you how to proceed
