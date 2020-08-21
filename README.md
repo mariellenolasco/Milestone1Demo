@@ -12,9 +12,13 @@ Your goal as a developer is to provide the missing implementations such that the
 </ol>
 
 ### Hint
-The AddressModel has a half implemented validate method that shows you how to proceed
+The AddressModel has a half implemented validate method that shows you how to proceed. <br>
+To comply with validation that requires pattern matching, it is recommended to use RegEx.
 
-## Testing 
+## Remarks
+This milestone requires you to use the ```Validate()``` method of each model to return the validation errors. 
+
+## Checking your work
 To test your work, go into the folder containing the solution file. 
 <br>
 Run command ```dotnet test```. 
